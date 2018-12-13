@@ -8,6 +8,11 @@
 *
 * Description: The basic css template for my Zen Garden project for school.
 *****************************************************************************************************/
+/***************************
+* Font Import
+***********************************/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Philosopher');
+
 
 /* Basics */
 html {
@@ -17,7 +22,7 @@ html {
 	}
 
 body { 
-        font: 75% georgia, sans-serif;
+        font: 75% 'Open Sans', sans-serif;
         line-height: 1.88889;
         color: #555753; 
         margin: 0; 
@@ -34,13 +39,14 @@ h3 {
         color: black;
         font-size: 2.5em;
         margin: 0px;
+    font-family: 'Philosopher', sans-serif;
 	}
 
 /* link elements */
 a:link { 
         font-weight: bold; 
         text-decoration: none; 
-        color: red; 
+        color: white; 
 	}
 
 a:visited { 
@@ -52,8 +58,9 @@ a:visited {
 a:hover, a:focus, a:active { 
         font-weight: bold; 
         text-decoration: underline; 
-        color: black;
+        color: gold;
         font-size: 1.2em;
+        transition: 0.5s;
 	}
 
 /* Style for the weird underline under the word "CSS" */
@@ -76,6 +83,7 @@ header {
         margin: 0px;
         padding: 0px;
         margin-top: -3%;
+        font-family: 'Philosopher', sans-serif;
 }
 
 header h1 { 
@@ -84,6 +92,7 @@ header h1 {
         color: black;
         width: 100%;
         font-size: 5.0em;
+        
 	}
 
 header h2 { 
@@ -198,6 +207,15 @@ header h2 {
         text-align: center;
         width: 100%;
         margin-top: 500px;
+        background-color: black;
+    }
+
+    .sidebar h3 {
+        color: white;
+    }
+
+    .sidebar {
+        color: white;
     }
     
     .sidebar ul {
@@ -287,7 +305,7 @@ For mobile phones:
         top: 100%;
         left: 0%;
         margin-left: 20%;
-        background-color: gray;
+        background-color: black;
         padding: 10px;
         width: 90px;
 	}
@@ -298,7 +316,7 @@ For mobile phones:
         top: 100%;
         right: 0%;
         margin-right: 20%;
-        background-color: gray;
+        background-color: black;
         padding: 10px;
         width: 90px;
 	}
@@ -349,35 +367,34 @@ For mobile phones:
     .participation {
         width: 100%;
         margin: 0px;
-        background-color: black;
     }
    
     .participation p {
         margin: 5px 15px 10px 15px;
         text-align: center;
-        color: white;
-    }
-    
-    .participation h3 {
-        color: white;
     }
     
     .benefits {
         margin-top: 10%;
         width: 100%;
         margin-bottom: 10%;
+        background-color: black;
     }
     
     .benefits p {
         margin: 5px 15px 10px 15px;
         text-align: center;
+        color: white;
+    }
+    
+    .benefits h3 {
+        color: white;
     }
     
     .requirements {
         margin-top: 10%;
         width: 100%;
         float: none;
-        background-color: 
     }
     
     .requirements p {
@@ -385,11 +402,15 @@ For mobile phones:
         text-align: center;
     }
     
+    .requirements a {
+        color: black;
+    }
+    
     /* Footer and everything below it */
     footer {
         width: 100%;
         margin-top: 10%;
-        background-color: gray;
+        background-color: black;
         padding: 10px;
     }
     
@@ -403,7 +424,7 @@ For mobile phones:
     .sidebar {
         text-align: center;
         width: 100%;
-        margin: 0px;
+        margin-top: -18px;
     }
     
     .sidebar ul {
