@@ -1,0 +1,425 @@
+/***************************************************************************************
+* ZEN GARDEN PROJECT
+* 
+* Author: Jacob Call
+* Class: WDD 331
+* Date Created: 11/10/2018
+* Last Modified: 12/13/2018
+*
+* Description: The basic scss template for my Zen Garden project for school. 
+* Includes partials imported from from partials folder.
+*****************************************************************************************************/
+
+/******************************
+* IMPORTS
+********************************/
+@import 'partials/prefix-mixins';
+@import 'partials/layout'; // responsive grid and media queries
+@import 'partials/colors';
+@import 'partials/navigation';
+@import 'partials/typography';
+@import 'partials/buttons';
+
+
+/* basic elements */
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font: 75% georgia, sans-serif;
+    line-height: 1.88889;
+    color: #555753; 
+    background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
+    margin: 0; 
+    padding: 0;
+    background-color: $background-desktop;
+}
+
+p { 
+    margin-top: 0; 
+    text-align: justify;
+}
+
+h3 { 
+    color: black;
+    font-size: 2.5em;
+    margin: 0px;
+}
+
+/* link elements */
+a:link { 
+    font-weight: bold; 
+    text-decoration: none; 
+    color: red; 
+}
+
+a:visited { 
+    font-weight: bold; 
+    text-decoration: none; 
+    color: pink;
+}
+
+a:hover, a:focus, a:active { 
+    font-weight: bold; 
+    text-decoration: underline; 
+    color: black;
+    font-size: 1.2em;
+}
+
+/* Style for the weird underline under the word "CSS" */
+abbr {
+    border-bottom: none;
+}
+
+/* specific divs */
+.page-wrapper { 
+    position: absolute;
+}
+
+.intro { 
+    width: 100%;
+    text-align: center;
+}
+
+
+header {
+    margin: 0px;
+    padding: 0px;
+}
+
+header h1 { 
+    margin-top: 3%;
+    margin-bottom: 0px;
+    color: white;
+    width: 100%;
+    font-size: 5.0em;
+}
+
+header h2 { 
+    color: black;
+    width: 100%;
+    font-size: 2.5em;
+}
+
+.summary { 
+    width: 100%; 
+    padding: 5px;
+    position: absolute;
+    margin-top: -25px;
+}
+
+.summary p {
+    font: italic 1.6em/2.2 georgia; 
+    text-align: center;
+    margin: 15px;
+    color: black;
+}
+
+.summary p:nth-child(2) {
+    margin-top: 80px; 
+}
+
+
+.summary a:nth-child(1) {
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: gray;
+    padding: 10px;
+    width: 100%;
+}
+
+.summary a:nth-child(2) {
+    color: white;
+    position: absolute;
+    top: 135%;
+    right: 0%;
+    background-color: gray;
+    padding: 10px;
+    width: 100%;
+}
+
+.preamble {
+    margin-top: 450px;
+    width: 50%;
+    float: left;
+}
+
+.preamble p {
+    margin: 5px 15px 10px 15px;
+    text-align: center;
+}  
+
+.main {
+    text-align: center;
+    width: 100%;
+}
+
+.explanation {
+    margin-top: 725px;
+    float: right;
+    width: 50%;
+}
+
+.explanation p {
+    margin: 5px 15px 10px 15px;
+    text-align: center;
+}
+
+.participation {
+    margin-top: 325px;
+    width: 50%;
+    float: left;
+}
+   
+.participation p {
+    margin: 5px 15px 10px 15px;
+    text-align: center;
+}
+
+.benefits {
+    margin-top: 325px;
+    width: 50%;
+    float: right;
+}
+    
+.benefits p {
+    margin: 5px 15px 10px 15px;
+    text-align: center;
+}
+
+.requirements {
+    margin-top: 155px;
+    width: 50%;
+    float: left;
+}
+
+.requirements p {
+    margin: 5px 15px 10px 15px;
+    text-align: center;
+}
+
+/* Sidebar */
+    
+.sidebar {
+    text-align: center;
+    width: 100%;
+    margin-top: 500px;
+}
+    
+.sidebar ul {
+    margin: 5px;
+    padding: 5px;
+}
+    
+.sidebar li {
+    display: inline;
+    list-style: none; 
+    margin: 5px;
+    padding: 2px;
+}
+    
+.design-selection {
+    margin-top: 5%;
+}
+    
+.design-archives {
+    margin-top: 5%;
+}
+    
+.zen-resources {
+    margin-top: 5%;
+}
+
+/*************************************************************** 
+For mobile phones: 
+******************************************************************************/
+@media only screen and (max-width: 768px) {
+    
+    body {
+        /* Will change background */
+        background-color: $background-mobile;
+    }
+    
+    h3 { 
+        color: black;
+        font-size: 1.8em;
+        margin: 0px;
+	}
+    
+    /* Header formatting */
+    
+    header h1 { 
+        margin-top: 6%;
+        color: white;
+        width: 100%;
+        font-size: 3.5em;
+	}
+    
+    header h2 { 
+        margin-top: 5%;
+        color: black;
+        width: 100%;
+        font-size: 1.8em;
+	}
+    
+    .summary { 
+        width: 100%; 
+        padding: 5px;
+        margin-top: -25px;
+	}
+
+    .summary p {
+        font: italic 1.1em/2.2 georgia; 
+        text-align: center;
+        margin: 15px;
+        color: black;
+	}
+    
+    /* Download the examples special formatting */
+    
+    .summary p:nth-child(2) {
+        margin-top: 100px; 
+	}
+
+    .summary a:nth-child(1) {
+        color: white;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        margin-left: 20%;
+        background-color: gray;
+        padding: 10px;
+        width: 90px;
+	}
+
+    .summary a:nth-child(2) {
+        color: white;
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        margin-right: 20%;
+        background-color: gray;
+        padding: 10px;
+        width: 90px;
+	}
+    
+    /* Main Body formatting (Preamble, Main, Supporting, Participation, Benefits, Requirements) */
+
+    .preamble {
+	    margin-top: 350px;
+        width: 100%;
+	}
+
+    .preamble p {
+	    margin: 5px 15px 10px 15px;
+        text-align: center;
+	}    
+
+    .main {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .explanation {
+        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    
+    .explanation p {
+        margin: 5px 15px 10px 15px;
+        text-align: center;
+    }
+    
+    .supporting {
+        width: 100%;
+    }  
+    
+    .supporting p {
+        margin: 5px 15px 10px 15px;
+        text-align: center;
+    }
+    
+    .participation {
+        width: 100%;
+        margin: 0px;
+    }
+   
+    .participation p {
+        margin: 5px 15px 10px 15px;
+        text-align: center;
+    }
+    
+    .benefits {
+        margin-top: 10%;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    
+    .benefits p {
+        margin: 5px 15px 10px 15px;
+        text-align: center;
+    }
+    
+    .requirements {
+        margin-top: 10%;
+        width: 100%;
+        float: none;
+    }
+    
+    .requirements p {
+        margin: 5px 15px 10px 15px;
+        text-align: center;
+    }
+    
+    /* Footer and everything below it */
+    footer {
+        width: 100%;
+        margin-top: 10%;
+        background-color: gray;
+        padding: 10px;
+    }
+    
+    footer a {
+        margin: 8px;
+        font-size: 1.1em; 
+    }
+    
+    /* Sidebar */
+    
+    .sidebar {
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+    }
+    
+    .sidebar ul {
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .sidebar li {
+        display: inline;
+        list-style: none; 
+        margin: 5px;
+        padding: 2px;
+
+    }
+    
+    .design-selection {
+        margin-top: 5%;
+    }
+    
+    .design-archives {
+        margin-top: 5%;
+    }
+    
+    .zen-resources {
+        margin-top: 5%;
+    }
+}
+    
